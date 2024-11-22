@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>退货拆包示范视频</title>
+	</head>
+	<body>
+		<h1 style="text-align:center;">退货拆包示范视频</h1>
+		<hr>
+		<div style="text-align:center"> 
+		  <button onclick="playPause()" type="button">播放/暂停</button> 
+		  <button onclick="makeBig()" type="button">放大</button>
+		  <button onclick="makeSmall()" type="button">缩小</button>
+		  <button onclick="makeNormal()" type="button">普通</button>
+		  <br> 
+		  <video id="video1" width="850">
+		    <source src="./sp/111.mp4" type="video/mp4">
+		    <source src="./sp/111.ogg" type="video/ogg">
+		  </video>
+		</div> 
+		
+		<script> 
+		var myVideo=document.getElementById("video1");
+		
+		function playPause()
+		{ 
+			if (myVideo.paused) 
+				myVideo.play(); 
+			else 
+				myVideo.pause();
+			
+			myVideo.controls=true;
+			
+		} 
+		
+			function makeBig()
+		{ 
+			myVideo.width=1000; 
+		} 
+		
+			function makeSmall()
+		{ 
+			myVideo.width=600; 
+		} 
+		
+			function makeNormal()
+		{ 
+			myVideo.width=850; 
+		} 
+		</script> 
+
+	</body>
+</html>
